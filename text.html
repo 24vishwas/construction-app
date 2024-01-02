@@ -1,0 +1,739 @@
+<style>
+    .nav-wrapper{
+    position: relative;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    padding-block: 10px;
+ 
+}
+.container1{
+    max-width: 1320px;
+    /* padding: 0 2rem; */
+    margin: 0 auto;
+    display: flex;
+    position: relative;
+    z-index: 11;
+}
+
+.admin-login{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.login{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    color: white;
+}
+.login img{
+    width: 45px;
+    height: 45px;
+}
+.title h1{
+    color: white;
+    
+}
+
+.nav-btn{
+    flex: 3;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+}
+
+.nav-links{
+    flex: 2;
+}
+
+.log-sign div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex: 1;
+}
+
+.logo{
+    color: rgb(0, 0, 0);
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    line-height: 3rem;
+}
+
+.logo span{
+    font-weight: 300;
+}
+.logo img{
+    width: 80px;
+}
+
+.btn{
+    display: inline-block;
+    padding: .5rem 1.3rem;
+    font-size: .8rem;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 2rem;
+    line-height: 1;
+    margin: 0 .2rem;
+    transition: .3s;
+    text-transform: uppercase;
+}
+
+.btn.solid, .btn.transparent:hover{
+    background-color: #fff;
+    color: #000000;
+}
+
+.btn.transparent, .btn.solid:hover{
+    background-color: transparent;
+    color: rgb(0, 0, 0);
+}
+
+.nav-links > ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-link{
+    position: relative;
+}
+
+.nav-link > a{
+    line-height: 3rem;
+    color: rgb(0, 0, 0);
+    padding: 0 .8rem;
+    letter-spacing: 1px;
+    font-size: .95rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: .5s;
+}
+
+.nav-link > a > i{
+    margin-left: .2rem;
+}
+
+.nav-link:hover > a{
+    transform: scale(1.1);
+}
+
+.dropdown{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 10rem;
+    transform: translateY(10px);
+    opacity: 0;
+    pointer-events: none;
+    transition: .5s;
+    width: 200px;
+}
+
+.dropdown ul{
+    position: relative;
+    padding: 0;
+}
+
+.dropdown-link > a{
+    display: flex;
+    background-color: #fff;
+    color: #000000;
+    padding: .5rem 1rem;
+    font-size: .9rem;
+    align-items: center;
+    justify-content: space-between;
+    transition: .3s;
+}
+
+.dropdown-link:hover > a{
+    background-color: #75151b;
+    color: rgb(255, 255, 255);
+}
+
+.dropdown-link:not(:nth-last-child(2)){
+    border-bottom: 1px solid #000000;
+}
+
+.dropdown-link i{
+    transform: rotate(-90deg);
+}
+
+.arrow{
+    position: absolute;
+    width: 11px;
+    height: 11px;
+    top: -5.5px;
+    left: 32px;
+    background-color: rgb(0, 0, 0);
+    transform: rotate(45deg);
+    cursor: pointer;
+    transition: .3s;
+    z-index: -1;
+}
+
+.dropdown-link:first-child:hover ~ .arrow{
+    background-color: #3498db;
+}
+
+.dropdown-link{
+    position: relative;
+}
+
+.dropdown.second{
+    top: 0;
+    left: 100%;
+    padding-left: .8rem;
+    cursor: pointer;
+    transform: translateX(10px);
+}
+
+.dropdown.second .arrow{
+    top: 10px;
+    left: -5.5px;
+}
+
+.nav-link:hover > .dropdown,
+.dropdown-link:hover > .dropdown{
+    transform: translate(0, 0);
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.hamburger-menu-container{
+    flex: 1;
+    display: none;
+    align-items: center;
+    justify-content: start;
+}
+
+.hamburger-menu{
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hamburger-menu div{
+    width: 1.6rem;
+    height: 3px;
+    border-radius: 3px;
+    background-color: rgb(255, 255, 255);
+    position: relative;
+    z-index: 1001;
+    transition: .5s;
+}
+
+.hamburger-menu div:before,
+.hamburger-menu div:after{
+    content: '';
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    background-color: rgb(255, 255, 255);
+    border-radius: 3px;
+    transition: .5s;
+}
+
+.hamburger-menu div:before{
+    transform: translateY(-7px);
+}
+
+.hamburger-menu div:after{
+    transform: translateY(7px);
+}
+
+#check{
+    position: absolute;
+    top: 50%;
+    left: -0.5rem;
+    transform: translateY(-50%);
+    width: 2.5rem;
+    height: 2.5rem;
+    z-index: 90000;
+    cursor: pointer;
+    opacity: 0;
+    display: none;
+}
+
+#check:checked ~ .hamburger-menu-container .hamburger-menu div{
+    background-color: transparent;
+    /* position: absolute; */
+
+    /* left: 10%; */
+}
+
+#check:checked ~ .hamburger-menu-container .hamburger-menu div:before{
+    transform: translateY(0) rotate(-45deg);
+    background-color: rgb(5, 4, 4);
+}
+
+#check:checked ~ .hamburger-menu-container .hamburger-menu div:after{
+    transform: translateY(0) rotate(45deg);
+    background-color: rgb(0, 0, 0);
+}
+
+#check:checked{
+        /* left: 10%; */
+}
+#check:checked ~ .hamburger-menu-container .hamburger-menu div{
+    /* left: 10%; */
+}
+.nav-links .logo img{
+    width: 180px;
+    height: auto;
+    display: none;
+}
+
+@keyframes animation{
+    from{
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+@media (min-width: 240px){
+    .nav-links .logo img{
+        display: inline;
+    }
+    .hamburger-menu-container{
+        display: flex;
+    }
+
+    #check{
+        display: block;
+    }
+    .nav-link > a{
+        color: rgb(0, 0, 0);
+    }
+
+    .nav-btn{
+        position: fixed;
+        height: calc(100vh - 3rem);
+        top: 0rem;
+        left: 0;
+        padding-top: 50px;
+        width: 33%;
+        background-color: #ffffff;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        overflow-x: hidden;
+        overflow-y: auto;
+        transform: translateX(-200%);
+        transition: .65s;
+    }
+
+    #check:checked ~ .nav-btn{
+        transform: translateX(0%);
+    }
+
+    #check:checked ~ .nav-btn .nav-link,
+    #check:checked ~ .nav-btn .log-sign{
+        animation: animation .5s ease forwards var(--i);
+    }
+
+    .nav-links{
+        flex: initial;
+        width: 100%;
+    }
+
+    .nav-links > ul{
+        flex-direction: column;
+    }
+
+    .nav-link{
+        width: 100%;
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    .nav-link > a{
+        line-height: 1;
+        padding: 1.6rem 2rem;
+    }
+
+    .nav-link:hover > a{
+        transform: scale(1);
+        /* background-color: #ffffff; */
+    }
+
+    .dropdown, .dropdown.second{
+        position: initial;
+        top: initial;
+        left: initial;
+        transform: initial;
+        opacity: 1;
+        pointer-events: auto;
+        width: 100%;
+        padding: 0;
+        /* background-color: #3183ac; */
+        display: none;
+    }
+    
+    .nav-link:hover > .dropdown,
+    .dropdown-link:hover > .dropdown{
+        display: block;
+    }
+
+    .nav-link:hover > a > i,
+    .dropdown-link:hover > a > i{
+        transform: rotate(360deg);
+    }
+
+    .dropdown-link > a{
+        background-color: transparent;
+        color: rgb(255, 255, 255);
+        padding: 1.2rem 2rem;
+        line-height: 1;
+    }
+
+    .dropdown.second .dropdown-link > a{
+        padding: 1.2rem 2rem 1.2rem 3rem;
+    }
+
+    .dropdown.second .dropdown.second .dropdown-link > a{
+        padding: 1.2rem 2rem 1.2rem 4rem;
+    }
+
+    .dropdown-link:not(:nth-last-child(2)){
+        border-bottom: none;
+    }
+
+    .arrow{
+        z-index: 1;
+        background-color: #69bde7;
+        left: 10%;
+        transform: scale(1.1) rotate(45deg);
+        transition: .5s;
+    }
+
+    .nav-link:hover .arrow{
+        background-color: #50a9d6;
+    }
+
+    .dropdown .dropdown .arrow{
+        display: none;
+    }
+
+    .dropdown-link:hover > a{
+        background-color: #000000;
+    }
+
+    .dropdown-link:first-child:hover ~ .arrow{
+        background-color: #50a9d6;
+    }
+
+    .nav-link > a > i{
+        font-size: 1.1rem;
+        transform: rotate(-90deg);
+        transition: .7s;
+    }
+
+    .dropdown i{
+        font-size: 1rem;
+        transition: .7s;
+    }
+
+    .log-sign{
+        flex: initial;
+        width: 100%;
+        padding: 1.5rem 1.9rem;
+        justify-content: flex-start;
+        opacity: 0;
+        transform: translateY(15px);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .nav-element li::after{
+    content: '';
+    background-color: rgba(255, 0, 0, 0.441);
+    width: 0%;
+    height: 1px;
+    display: block;
+    margin: auto;
+    transition: .3s ease-in-out;
+
+}
+.nav-element li:hover::after{
+    width: 100%;
+     */
+.nav-element li :hover {
+    color: #90272e;
+}
+
+.nav-element li:hover>ul {
+    display: flex;
+    padding: 0;
+    transition: 2s;
+    /* Show submenus on hover */
+}
+
+.navlogo {
+    width: 80px;
+    padding: 25px;
+    /* padding-left: 50px; */
+}
+
+.close {
+    width: 15px;
+}
+
+.open {
+    width: 20px;
+}
+
+.open {
+    display: none;
+}
+
+.close {
+    display: none;
+}
+
+.search {
+    width: 30px;
+    margin-right: 40px;
+    margin-left: 40px;
+}
+
+
+.btn {
+    padding: 16px 48px;
+    background: none;
+    border: 1px solid #75151b;
+    color: #75151b;
+    font-size: 20px;
+    cursor: pointer;
+    position: relative;
+    transition: color 0.3s ease-in-out;
+    z-index: 3;
+    border-radius: 5px;
+    margin-right: 10px;
+
+}
+
+.btn::before,
+.btn::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #75151b;
+    top: 0;
+    left: 0;
+    transition: clip-path 0.3s;
+    z-index: -1;
+
+
+}
+
+.btn::before {
+    clip-path: circle(0 at 0 0);
+
+}
+
+.btn::after {
+    clip-path: circle(0 at 100% 100%);
+
+}
+
+.btn:hover {
+    color: rgb(255, 255, 255);
+
+}
+
+.btn:hover::before {
+    clip-path: circle(100% at 0 0);
+
+}
+
+.btn:hover::after {
+    clip-path: circle(100% at 100% 100%);
+
+}
+
+.dropdown-img {
+    display: none;
+}
+@media (max-width:1024px) {
+    .title h1{
+        font-size: 18px;
+        font-weight: 500;
+    }
+}
+@media (max-width:767px) {
+    .nav-btn{
+        width: 300px;
+    }
+    .title{
+        display: none;
+    }
+    .login p{
+        display: none;
+    }
+}
+@media (max-width:500px) {
+    .nav-btn{
+        width: 200px;
+    }
+}
+
+
+</style>
+
+<nav>
+    <div class="nav-wrapper container">
+        <input type="checkbox" name="" id="check">
+        <div class="admin-login">
+            <a href="" class="login">
+                <img src="./assets/logo/admin-users-svgrepo-com.svg" alt="logo">
+                <p>User - Admin</p>
+            </a>
+        </div>
+        <div class="title">
+            <h1>Vivin Engineering and Contracting LLP</h1>
+        </div>
+
+
+       
+        <div class="nav-btn">
+            
+            <div class="nav-links">
+                <ul>
+                    <!-- <li class="nav-link" style="--i: .6s">
+                        <a href="index.html" class="logo"><img src="./images/Global-Technologies-Logo-01.svg" alt="logo"></a>
+                    </li> -->
+                    <li class="nav-link" style="--i: .6s">
+                        <a href="./index.html">Dashboard</a>
+                    </li>
+                    <li class="nav-link" style="--i: .6s">
+                        <a href="./about.html">Project</a>
+                    </li>
+                    <li class="nav-link" style="--i: .85s">
+                        <a href="#">Attendance</a>
+                        <!-- <div class="dropdown">
+                            <ul>
+                                <li class="dropdown-link">
+                                    <a href="#">Telecom Solution</a>
+                                    <div class="dropdown second">
+                                        <ul>
+                                            <li class="dropdown-link">
+                                                <a href="#">EPBAX</a>
+                                            </li>
+                                            <li class="dropdown-link">
+                                                <a href="#">Digital PBX</a>
+                                            </li>
+                                            <li class="dropdown-link">
+                                                <a href="#">Unified Communications</a>
+                                            </li>
+                                            <li class="dropdown-link">
+                                                <a href="#">IP-PBX</a>
+                                            </li>
+                                            <li class="dropdown-link">
+                                                <a href="#">IP PBX Server</a>
+                                            </li>
+                                            <li class="dropdown-link">
+                                                <a href="#">IP Phones</a>
+                                            </li>
+                                            <li class="dropdown-link">
+                                                <a href="#">Media Gateways</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="dropdown-link">
+                                    <a href="./network.html">Network Solutions</a>
+                                    <div class="dropdown second">
+                                        <ul>
+                                            <li class="dropdown-link">
+                                                <a href="./network.html">LAN</a>
+                                            </li>
+                                            <li class="dropdown-link">
+                                                <a href="./network.html">OFC</a>
+                                            </li>
+                                            <li class="dropdown-link">
+                                                <a href="./network.html">Wireless</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="dropdown-link">
+                                    <a href="#">Electronic Solutions</a>
+                                    <div class="dropdown second">
+                                        <ul>
+                                            <li class="dropdown-link">
+                                                <a href="#">CCTV</a>
+                                            </li>
+
+                                        </ul>
+                                    </div>
+                                </li>
+
+                               
+                                 <div class="arrow"></div>
+                            </ul>
+                        </div> -->
+                    </li>
+
+                    <li class="nav-link" style="--i: 1.35s">
+                        <a href="#">Contractor</a>
+                    </li>
+                    <li class="nav-link" style="--i: 1.35s">
+                        <a href="./contact.html">Vendor</a>
+                    </li>
+                    <li class="nav-link" style="--i: 1.35s">
+                        <a href="./contact.html">Users</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- <div class="log-sign" style="--i: 1.8s">
+                <div>
+                    <img src="./images/search-icon.svg" class="search" onclick='searchPage()' alt="">
+                    <a href="./contact.html"><button class="btn"> Contact Us</button></a>
+                </div>
+            </div> -->
+        </div>
+
+        <div class="hamburger-menu-container">
+        <div class="hamburger-menu">
+                <div></div>
+            </div>
+        </div>
+    </div>
+</nav>

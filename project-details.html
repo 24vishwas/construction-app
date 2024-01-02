@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Website</title>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+</head>
+
+<body style=" transition: transform 0.45s cubic-bezier(0, 0, 0.21, 1);">
+    <nav class="navbar">
+        <div class="nav container">
+
+
+            <i class="uil uil-bars navOpenBtn"></i>
+            <a href="#" class="logo">Vivin Engineering and Contracting LLP</a>
+
+            <ul class="nav-links">
+                <i class="uil uil-times navCloseBtn"></i>
+                <li><a href="./index.html">Dashboard</a></li>
+                <li><a href="./project.html">Projects</a></li>
+                <li><a href="#">Attendance</a></li>
+                <li><a href="#">Indent</a></li>
+                <li><a href="#">Contractor</a></li>
+                <li><a href="#">Vendor</a></li>
+                <li><a href="#">Users</a></li>
+            </ul>
+
+            <div class="admin-login">
+                <a href="" class="login">
+                    <img src="./assets/logo/admin-users-svgrepo-com.svg" alt="logo">
+                    <p>User - Admin</p>
+                </a>
+            </div>
+            <!-- <i class="uil uil-search search-icon" id="searchIcon"></i> -->
+            <!-- <div class="search-box">
+          <i class="uil uil-search search-icon"></i>
+          <input type="text" placeholder="Search here..." />
+        </div> -->
+        </div>
+    </nav>
+
+    <main>
+        <section class="page">
+            <div class="page-container">
+                <div class="wrapper">
+                    <h1 class="page-title">Project Details</h1>
+                    <!-- <div class="search-wrapper">
+                        <input type="text" name="" id="">
+                        <button class="primary-btn">Search</button>
+                    </div> -->
+                    <div class="project-detail-wrapper">
+                        <div class="project-detail-content">
+                            <ul>
+                                <li>
+                                    <div>
+                                        <img src="./assets/logo/project-icon.svg" alt="icon">
+                                        <p> Project name</p>
+                                    </div>
+                                    <div>
+                                        <img src="./assets/logo/map-icon.svg" alt="icon">
+                                        <p> Location</p>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <div>
+                                        <img src="./assets/logo/date-icon.svg" alt="icon">
+                                        <p> Start Date</p>
+                                    </div>
+                                    <div>
+                                        <img src="./assets/logo/date-icon.svg" alt="icon">
+                                        <p> End Date</p>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <div>
+                                        <img src="./assets/logo/width-icon.svg" alt="icon">
+                                        <p> Site Width</p>
+                                    </div>
+                                    <div>
+                                        <img src="./assets/logo/height-icon.svg" alt="icon">
+                                        <p> Site Height</p>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <div>
+                                        <img src="./assets/logo/deminsion-icon.svg" alt="icon">
+                                        <p> Project Dimension</p>
+                                    </div>
+                                </li>
+
+                                <!-- <li>
+                                <img src="./assets/logo/deminsion-icon.svg" alt="icon">
+                                <p> Project Dimension</p>
+                            </li> -->
+
+                            </ul>
+                        </div>
+                        <div class="site-eng">
+                            <img src="./assets/logo/profile-icon.svg" alt="icon">
+                            <h5>Site Engineer name</h5>
+                            <h5>Site Engineer name1</h5>
+                        </div>
+                    </div>
+                    <div class="attendance-container">
+                        <div class="attendance-item">
+                            <h2>Add Attendance</h2>
+                            <div class="attendance-p-name">
+                                <select id="dropdown" name="project" required>
+                                    <option value="" disabled selected hidden>Project Name</option>
+                                    <option value="option1">Option 1</option>
+                                    <option value="option2">Option 2</option>
+                                    <option value="option3">Option 3</option>
+                                    <option value="option4">Option 4</option>
+                                    <option value="option5">Option 5</option>
+                                </select>
+                                <select id="dropdown" name="project" required>
+                                    <option value="" disabled selected hidden>Contractor</option>
+                                    <option value="option1">Option 1</option>
+                                    <option value="option2">Option 2</option>
+                                    <option value="option3">Option 3</option>
+                                    <option value="option4">Option 4</option>
+                                    <option value="option5">Option 5</option>
+                                </select>
+                            </div>
+                            <div class="labour-select">
+                                <select id="dropdown" name="project" required>
+                                    <option value="" disabled selected hidden>Labor Types</option>
+                                    <option value="option1">Option 1</option>
+                                    <option value="option2">Option 2</option>
+                                    <option value="option3">Option 3</option>
+                                    <option value="option4">Option 4</option>
+                                    <option value="option5">Option 5</option>
+                                </select>
+                                <input type="text" name="" id="" placeholder="No of Labor">
+                            </div>
+                            <div class="labour-select">
+                                <select id="dropdown" name="project" required>
+                                    <option value="" disabled selected hidden>Labor Types</option>
+                                    <option value="option1">Option 1</option>
+                                    <option value="option2">Option 2</option>
+                                    <option value="option3">Option 3</option>
+                                    <option value="option4">Option 4</option>
+                                    <option value="option5">Option 5</option>
+                                </select>
+                                <input type="text" name="" id="" placeholder="No of Labor">
+                                <div class="btn-container">
+                                    <button class="tertiary-btn plus"> + </button>
+                                    <button class="tertiary-btn minus"> - </button>
+                                </div>
+                            </div>
+                            <div class="btn-container ">
+                                <button class="tertiary-btn plus"> + </button>
+                                <button class="tertiary-btn minus"> - </button>
+                            </div>
+                            <button type="submit" class="primary-btn submit-btn">Submit</button>
+                        </div>
+                        <div class="attendance-item">
+                            <h2>Add Attendance</h2>
+                            <div class="attendance-p-name">
+                                <select id="dropdown" name="project" required>
+                                    <option value="" disabled selected hidden>Project Name</option>
+                                    <option value="option1">Option 1</option>
+                                    <option value="option2">Option 2</option>
+                                    <option value="option3">Option 3</option>
+                                    <option value="option4">Option 4</option>
+                                    <option value="option5">Option 5</option>
+                                </select>
+                                <select id="dropdown" name="project" required>
+                                    <option value="" disabled selected hidden>Contractor</option>
+                                    <option value="option1">Option 1</option>
+                                    <option value="option2">Option 2</option>
+                                    <option value="option3">Option 3</option>
+                                    <option value="option4">Option 4</option>
+                                    <option value="option5">Option 5</option>
+                                </select>
+                            </div>
+                            <div class="labour-select">
+                                <select id="dropdown" name="project" required>
+                                    <option value="" disabled selected hidden>Labor Types</option>
+                                    <option value="option1">Option 1</option>
+                                    <option value="option2">Option 2</option>
+                                    <option value="option3">Option 3</option>
+                                    <option value="option4">Option 4</option>
+                                    <option value="option5">Option 5</option>
+                                </select>
+                                <input type="text" name="" id="" placeholder="No of Labor">
+                            </div>
+                            <div class="labour-select">
+                                <select id="dropdown" name="project" required>
+                                    <option value="" disabled selected hidden>Labor Types</option>
+                                    <option value="option1">Option 1</option>
+                                    <option value="option2">Option 2</option>
+                                    <option value="option3">Option 3</option>
+                                    <option value="option4">Option 4</option>
+                                    <option value="option5">Option 5</option>
+                                </select>
+                                <input type="text" name="" id="" placeholder="No of Labor">
+                                <div class="btn-container">
+                                    <button class="tertiary-btn plus"> + </button>
+                                    <button class="tertiary-btn minus"> - </button>
+                                </div>
+                            </div>
+                            <div class="btn-container ">
+                                <button class="tertiary-btn plus"> + </button>
+                                <button class="tertiary-btn minus"> - </button>
+                            </div>
+                            <button type="submit" class="primary-btn submit-btn">Submit</button>
+                        </div>
+                        <div class="attendance-item">
+                            <h2>Add Attendance</h2>
+                            <div class="attendance-p-name">
+                                <select id="dropdown" name="project" required>
+                                    <option value="" disabled selected hidden>Project Name</option>
+                                    <option value="option1">Option 1</option>
+                                    <option value="option2">Option 2</option>
+                                    <option value="option3">Option 3</option>
+                                    <option value="option4">Option 4</option>
+                                    <option value="option5">Option 5</option>
+                                </select>
+                                <select id="dropdown" name="project" required>
+                                    <option value="" disabled selected hidden>Contractor</option>
+                                    <option value="option1">Option 1</option>
+                                    <option value="option2">Option 2</option>
+                                    <option value="option3">Option 3</option>
+                                    <option value="option4">Option 4</option>
+                                    <option value="option5">Option 5</option>
+                                </select>
+                            </div>
+                            <div class="labour-select">
+                                <select id="dropdown" name="project" required>
+                                    <option value="" disabled selected hidden>Labor Types</option>
+                                    <option value="option1">Option 1</option>
+                                    <option value="option2">Option 2</option>
+                                    <option value="option3">Option 3</option>
+                                    <option value="option4">Option 4</option>
+                                    <option value="option5">Option 5</option>
+                                </select>
+                                <input type="text" name="" id="" placeholder="No of Labor">
+                            </div>
+                            <div class="labour-select">
+                                <select id="dropdown" name="project" required>
+                                    <option value="" disabled selected hidden>Labor Types</option>
+                                    <option value="option1">Option 1</option>
+                                    <option value="option2">Option 2</option>
+                                    <option value="option3">Option 3</option>
+                                    <option value="option4">Option 4</option>
+                                    <option value="option5">Option 5</option>
+                                </select>
+                                <input type="text" name="" id="" placeholder="No of Labor">
+                                <div class="btn-container">
+                                    <button class="tertiary-btn plus"> + </button>
+                                    <button class="tertiary-btn minus"> - </button>
+                                </div>
+                            </div>
+                            <div class="btn-container ">
+                                <button class="tertiary-btn plus"> + </button>
+                                <button class="tertiary-btn minus"> - </button>
+                            </div>
+                            <button type="submit" class="primary-btn submit-btn">Submit</button>
+                        </div>
+                    </div>
+                    <div class="attendance-container">
+                        <div class="attendance-item">
+                            <h2>Add Overtime</h2>
+                            <div class="attendance-p-name">
+                                <select id="dropdown" name="project" required>
+                                    <option value="" disabled selected hidden>Project Name</option>
+                                    <option value="option1">Option 1</option>
+                                    <option value="option2">Option 2</option>
+                                    <option value="option3">Option 3</option>
+                                    <option value="option4">Option 4</option>
+                                    <option value="option5">Option 5</option>
+                                </select>
+                                <select id="dropdown" name="project" required>
+                                    <option value="" disabled selected hidden>Contractor</option>
+                                    <option value="option1">Option 1</option>
+                                    <option value="option2">Option 2</option>
+                                    <option value="option3">Option 3</option>
+                                    <option value="option4">Option 4</option>
+                                    <option value="option5">Option 5</option>
+                                </select>
+                            </div>
+                            <div class="labour-select">
+                                <select id="dropdown" name="project" required>
+                                    <option value="" disabled selected hidden>Labor Types</option>
+                                    <option value="option1">Option 1</option>
+                                    <option value="option2">Option 2</option>
+                                    <option value="option3">Option 3</option>
+                                    <option value="option4">Option 4</option>
+                                    <option value="option5">Option 5</option>
+                                </select>
+                                <input type="text" name="" id="" placeholder="No of Labor">
+                            </div>
+                            <div class="labour-select">
+                                <select id="dropdown" name="project" required>
+                                    <option value="" disabled selected hidden>Labor Types</option>
+                                    <option value="option1">Option 1</option>
+                                    <option value="option2">Option 2</option>
+                                    <option value="option3">Option 3</option>
+                                    <option value="option4">Option 4</option>
+                                    <option value="option5">Option 5</option>
+                                </select>
+                                <input type="text" name="" id="" placeholder="No of Labor">
+                                <div class="btn-container">
+                                    <button class="tertiary-btn plus"> + </button>
+                                    <button class="tertiary-btn minus"> - </button>
+                                </div>
+                            </div>
+                            <div class="btn-container ">
+                                <button class="tertiary-btn plus"> + </button>
+                                <button class="tertiary-btn minus"> - </button>
+                            </div>
+                            <button type="submit" class="primary-btn submit-btn">Submit</button>
+                        </div>
+                        <div class="attendance-item">
+                            <h2>Add Overtime</h2>
+                            <div class="attendance-p-name">
+                                <select id="dropdown" name="project" required>
+                                    <option value="" disabled selected hidden>Project Name</option>
+                                    <option value="option1">Option 1</option>
+                                    <option value="option2">Option 2</option>
+                                    <option value="option3">Option 3</option>
+                                    <option value="option4">Option 4</option>
+                                    <option value="option5">Option 5</option>
+                                </select>
+                                <select id="dropdown" name="project" required>
+                                    <option value="" disabled selected hidden>Contractor</option>
+                                    <option value="option1">Option 1</option>
+                                    <option value="option2">Option 2</option>
+                                    <option value="option3">Option 3</option>
+                                    <option value="option4">Option 4</option>
+                                    <option value="option5">Option 5</option>
+                                </select>
+                            </div>
+                            <div class="labour-select">
+                                <select id="dropdown" name="project" required>
+                                    <option value="" disabled selected hidden>Labor Types</option>
+                                    <option value="option1">Option 1</option>
+                                    <option value="option2">Option 2</option>
+                                    <option value="option3">Option 3</option>
+                                    <option value="option4">Option 4</option>
+                                    <option value="option5">Option 5</option>
+                                </select>
+                                <input type="text" name="" id="" placeholder="No of Labor">
+                            </div>
+                            <div class="labour-select">
+                                <select id="dropdown" name="project" required>
+                                    <option value="" disabled selected hidden>Labor Types</option>
+                                    <option value="option1">Option 1</option>
+                                    <option value="option2">Option 2</option>
+                                    <option value="option3">Option 3</option>
+                                    <option value="option4">Option 4</option>
+                                    <option value="option5">Option 5</option>
+                                </select>
+                                <input type="text" name="" id="" placeholder="No of Labor">
+                                <div class="btn-container">
+                                    <button class="tertiary-btn plus"> + </button>
+                                    <button class="tertiary-btn minus"> - </button>
+                                </div>
+                            </div>
+                            <div class="btn-container ">
+                                <button class="tertiary-btn plus"> + </button>
+                                <button class="tertiary-btn minus"> - </button>
+                            </div>
+                            <button type="submit" class="primary-btn submit-btn">Submit</button>
+                        </div>
+                        <div class="attendance-item">
+                            <h2>Add Overtime</h2>
+                            <div class="attendance-p-name">
+                                <select id="dropdown" name="project" required>
+                                    <option value="" disabled selected hidden>Project Name</option>
+                                    <option value="option1">Option 1</option>
+                                    <option value="option2">Option 2</option>
+                                    <option value="option3">Option 3</option>
+                                    <option value="option4">Option 4</option>
+                                    <option value="option5">Option 5</option>
+                                </select>
+                                <select id="dropdown" name="project" required>
+                                    <option value="" disabled selected hidden>Contractor</option>
+                                    <option value="option1">Option 1</option>
+                                    <option value="option2">Option 2</option>
+                                    <option value="option3">Option 3</option>
+                                    <option value="option4">Option 4</option>
+                                    <option value="option5">Option 5</option>
+                                </select>
+                            </div>
+                            <div class="labour-select">
+                                <select id="dropdown" name="project" required>
+                                    <option value="" disabled selected hidden>Labor Types</option>
+                                    <option value="option1">Option 1</option>
+                                    <option value="option2">Option 2</option>
+                                    <option value="option3">Option 3</option>
+                                    <option value="option4">Option 4</option>
+                                    <option value="option5">Option 5</option>
+                                </select>
+                                <input type="text" name="" id="" placeholder="No of Labor">
+                            </div>
+                            <div class="labour-select">
+                                <select id="dropdown" name="project" required>
+                                    <option value="" disabled selected hidden>Labor Types</option>
+                                    <option value="option1">Option 1</option>
+                                    <option value="option2">Option 2</option>
+                                    <option value="option3">Option 3</option>
+                                    <option value="option4">Option 4</option>
+                                    <option value="option5">Option 5</option>
+                                </select>
+                                <input type="text" name="" id="" placeholder="No of Labor">
+                                <div class="btn-container">
+                                    <button class="tertiary-btn plus"> + </button>
+                                    <button class="tertiary-btn minus"> - </button>
+                                </div>
+                            </div>
+                            <div class="btn-container ">
+                                <button class="tertiary-btn plus"> + </button>
+                                <button class="tertiary-btn minus"> - </button>
+                            </div>
+                            <button type="submit" class="primary-btn submit-btn">Submit</button>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+    </main>
+    <script src="index.js"></script>
+</body>
+
+</html>

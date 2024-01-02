@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Website</title>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+</head>
+
+<body style=" transition: transform 0.45s cubic-bezier(0, 0, 0.21, 1);">
+    <nav class="navbar">
+        <div class="nav container">
+
+
+            <i class="uil uil-bars navOpenBtn"></i>
+            <a href="#" class="logo">Vivin Engineering and Contracting LLP</a>
+
+            <ul class="nav-links">
+                <i class="uil uil-times navCloseBtn"></i>
+                <li><a href="./index.html">Dashboard</a></li>
+                <li><a href="./project.html">Projects</a></li>
+                <li><a href="#">Attendance</a></li>
+                <li><a href="#">Indent</a></li>
+                <li><a href="#">Contractor</a></li>
+                <li><a href="#">Vendor</a></li>
+                <li><a href="#">Users</a></li>
+            </ul>
+
+            <div class="admin-login">
+                <a href="" class="login">
+                    <img src="./assets/logo/admin-users-svgrepo-com.svg" alt="logo">
+                    <p>User - Admin</p>
+                </a>
+            </div>
+            <!-- <i class="uil uil-search search-icon" id="searchIcon"></i> -->
+            <!-- <div class="search-box">
+          <i class="uil uil-search search-icon"></i>
+          <input type="text" placeholder="Search here..." />
+        </div> -->
+        </div>
+    </nav>
+
+    <main>
+        <section id="editform" class="page">
+            <div class="page-container">
+                <div class="wrapper">
+                    <h1 class="page-title">Edit Project</h1>
+                    <form class="add-project-form" action="">
+                        <button id="close" onclick="closeeditform()"><img src="./assets/logo/close-bold-svgrepo-com.svg" alt="close"></button>
+                        <div class="input-container">
+                        <label for="project-name">Project Name*</label>
+                        <input type="text" name="project-name" id="">
+                    </div>
+
+                    <div class="input-container">
+                        <label for="project-name">Location*</label>
+                        <input type="text" name="location" id="">
+                    </div>
+
+                    <div class="input-container input-flex">
+                        <div>
+                            <label for="project-name">Start Date*</label>
+                            <input type="text" name="start-date" id="">
+                        </div>
+                        <div>
+                            <label for="project-name">End Date*</label>
+                            <input type="text" name="end-date" id="">
+                        </div>
+                    </div>
+
+                    <div class="input-container input-flex">
+                        <div>
+                            <label for="project-name">Site Width*</label>
+                            <input type="text" name="site-width" id="">
+                        </div>
+                        <div>
+                            <label for="project-name">Site Length*</label>
+                            <input type="text" name="site-length" id="">
+                        </div>
+                        <div>
+                            <label for="project-name">Project Dimension*</label>
+                            <input type="text" name="dimension" id="">
+                        </div>
+                    </div>
+                    <div class="input-container">
+                        <div>
+                            <label for="">Ste Engineer Assigned</label>
+                            <select id="dropdown" name="project" required>
+                                <option value="" disabled selected hidden>Project Engineer 1</option>
+                                <option value="option1">Option 1</option>
+                                <option value="option2">Option 2</option>
+                                <option value="option3">Option 3</option>
+                                <option value="option4">Option 4</option>
+                                <option value="option5">Option 5</option>
+                            </select>
+
+                            <button type="submit" class="primary-btn">Submit</button>
+                        </div>
+                    </div>
+                    </form>
+                  
+                    
+                   
+
+                </div>
+
+            </div>
+        </section>
+        <section id="add-project" class="page">
+            <div class="page-container">
+                <div class="wrapper">
+                    <h1 class="page-title">Add Project</h1>
+                    <form class="add-project-form" action="">
+                        <button id="close" onclick="closeform()"><img src="./assets/logo/close-bold-svgrepo-com.svg" alt="close"></button>
+                        <div class="input-container">
+                        <label for="project-name">Project Name*</label>
+                        <input type="text" name="project-name" id="">
+                    </div>
+
+                    <div class="input-container">
+                        <label for="project-name">Location*</label>
+                        <input type="text" name="location" id="">
+                    </div>
+
+                    <div class="input-container input-flex">
+                        <div>
+                            <label for="project-name">Start Date*</label>
+                            <input type="text" name="start-date" id="">
+                        </div>
+                        <div>
+                            <label for="project-name">End Date*</label>
+                            <input type="text" name="end-date" id="">
+                        </div>
+                    </div>
+
+                    <div class="input-container input-flex">
+                        <div>
+                            <label for="project-name">Site Width*</label>
+                            <input type="text" name="site-width" id="">
+                        </div>
+                        <div>
+                            <label for="project-name">Site Length*</label>
+                            <input type="text" name="site-length" id="">
+                        </div>
+                        <div>
+                            <label for="project-name">Project Dimension*</label>
+                            <input type="text" name="dimension" id="">
+                        </div>
+                    </div>
+                    <div class="input-container">
+                        <div>
+                            <label for="">Ste Engineer Assigned</label>
+                            <select id="dropdown" name="project" required>
+                                <option value="" disabled selected hidden>Project Engineer 1</option>
+                                <option value="option1">Option 1</option>
+                                <option value="option2">Option 2</option>
+                                <option value="option3">Option 3</option>
+                                <option value="option4">Option 4</option>
+                                <option value="option5">Option 5</option>
+                            </select>
+
+                            <button type="submit" class="primary-btn">Submit</button>
+                        </div>
+                    </div>
+                    </form>
+                  
+                    
+                   
+
+                </div>
+
+            </div>
+        </section>
+        <section id="project" class="page">
+            <div class="page-container">
+                <div class="wrapper">
+                    <h1 class="page-title">Dashboard</h1>
+                    <div class="search-wrapper">
+                        <input type="text" name="" id="">
+                        <button class="primary-btn">Search</button>
+                    </div>
+                    <button class="primary-btn project-add-btn" onclick="openform()"><a >Add</a></button>
+                    <div class="card-wrapper projects-cards-wrapper">
+                        <div class="card">
+                            <div class="card-container">
+
+                                <div>
+                                    <h4 class="project-name">Project Name</h4>
+                                    <p>Location</p>
+                                </div>
+                                <div class="card-btn-container">
+                                    <button onclick="openeditform()" class="secondary-btn edit-btn"><a>Edit</a></button>
+                                    <button class="secondary-btn view-btn"><a href="./project-details.html">View</a></button>
+                                    <button class="secondary-btn delete-btn"><a href="">Delete</a></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-container">
+
+                                <div>
+                                    <h4 class="project-name">Project Name</h4>
+                                    <p>Location</p>
+                                </div>
+                                <div class="card-btn-container">
+                                    <button class="secondary-btn edit-btn"><a href="">Edit</a></button>
+                                    <button class="secondary-btn view-btn"><a href="./project-details.html">View</a></button>
+                                    <button class="secondary-btn delete-btn"><a href="">Delete</a></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-container">
+
+                                <div>
+                                    <h4 class="project-name">Project Name</h4>
+                                    <p>Location</p>
+                                </div>
+                                <div class="card-btn-container">
+                                    <button class="secondary-btn edit-btn"><a href="">Edit</a></button>
+                                    <button class="secondary-btn view-btn"><a href="./project-details.html">View</a></button>
+                                    <button class="secondary-btn delete-btn"><a href="">Delete</a></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-container">
+
+                                <div>
+                                    <h4 class="project-name">Project Name</h4>
+                                    <p>Location</p>
+                                </div>
+                                <div class="card-btn-container">
+                                    <button class="secondary-btn edit-btn"><a href="">Edit</a></button>
+                                    <button class="secondary-btn view-btn"><a href="./project-details.html">View</a></button>
+                                    <button class="secondary-btn delete-btn"><a href="">Delete</a></button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- <div class="card"></div>
+                        <div class="card"></div>
+                        <div class="card"></div> -->
+                    </div>
+
+
+                </div>
+
+            </div>
+        </section>
+    </main>
+    <script src="index.js"></script>
+</body>
+
+</html>
